@@ -5,8 +5,49 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Add these line for detecting device width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
 </head>
 <body>
+  <!-- Banner -->
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(236, 240, 241,0.2) 0%, rgba(0,36,61,0.6) 50%), url( <%= image_path 'background.jpg' %> );">
+  <div class="container">
+    <div class="banner-content">
+      <h1>Louer mon <span class="typer" data-delay="150" data-words="appartement, logement, chalet, gîte, château" data-colors="white"></span></h1>
+      <h1>simplement</h1>
+      <p>Trouver un locataire ne devrait pas être si complexe. <br> Zenkey simplifie l'organisation des visites et la recherche d'un locataire</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<div class="container">
+  <div class="row text-center marged-top">
+    <h1>Propriétaires, nous pouvons vous aider</h1>
+  </div>
+  <div class="row text-center marged-top">
+    <div class="col-sm-4 col-xs-12">
+      <%= image_tag "feature_annonce.png", class: "feature-img-small" %>
+      <h3>Partage de votre annonce</h3>
+      <p>Zenkey simplifie la diffusion de votre annonce en vous permettant de la publier sur différents canaux.</p>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <%= image_tag "feature_visites.png", class: "feature-img-small" %>
+      <h3>Organisation des visites</h3>
+      <p>Plus besoin de passer des heures au téléphone pour organiser vos visites. Toutes les visites sont organisées en ligne en fonction de vos disponibilités.</p>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <%= image_tag "feature_choix.png", class: "feature-img-small" %>
+      <h3>Choix du locataire</h3>
+      <p>Les dossiers des locataires sont classés et notés vous permettant de simplifier votre choix.</p>
+    </div>
+  </div>
+</div>
+
 
 <%= yield %>
 
